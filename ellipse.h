@@ -55,13 +55,13 @@ class ellipse : public shape {
 
 		try
 		{
-			if(radii.x()<epsilon||radii.y()<epsilon)
+			if(radii.x()==0||radii.y()==0)
 			{
-				if(radii.x()<epsilon)
+				if(radii.x()<0)
 				{
 					radii.setX(2);
 				}
-				if(radii.y()<epsilon)
+				if(radii.y()<0)
 				{
 					radii.setY(2);
 				}
