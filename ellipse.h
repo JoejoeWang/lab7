@@ -55,16 +55,11 @@ class ellipse : public shape {
 
 		try
 		{
-			if(radii.x()==0||radii.y()==0)
-			{
-				if(radii.x()<0)
-				{
+			if(radii.x()<epsilon||radii.y()<epsilon){
+				if(radii.x()<epsilon)
 					radii.setX(2);
-				}
-				if(radii.y()<0)
-				{
+				if(radii.y()<epsilon)
 					radii.setY(2);
-				}
 				this->setColor(color(255,0,0));
 				throw overflow_error("ellipse divide zero");
 			}
