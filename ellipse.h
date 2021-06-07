@@ -55,7 +55,7 @@ class ellipse : public shape {
 
 		try
 		{
-			if(radii.x()==epsilon||radii.y()==epsilon)
+			if(radii.x()<epsilon||radii.y()<epsilon)
 			{
 				if(radii.x()<epsilon)
 				{
